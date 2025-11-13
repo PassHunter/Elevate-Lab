@@ -1,8 +1,8 @@
-# Elevate Lab – Task 1: Local Network Port Scanning & Risk Analysis
+#Task 1: Scan Your Local Network for Open Ports
 
 ## Student: Ayush Madavi
 
-## Date: 2025-11-13
+## Date:  13-111-2025
 
 ## Attacker Machine: Kali Linux
 
@@ -81,43 +81,67 @@ sudo nmap --script vuln 10.10.10.129 -oN got-vuln.txt
 
 ---
 
-## 📘 Research on Common Services
+📘 Research on Common Services
 
-### FTP (21)
+A detailed analysis of each identified service was conducted to understand its purpose, how it typically behaves in a network, and what security implications it may introduce. This research step forms the foundation for identifying potential vulnerabilities and evaluating the overall security posture of the target system.
 
-* Transfers data in plaintext
-* May allow anonymous login
-* **Risk:** Medium
+🔹 FTP (Port 21)
 
-### SSH (22)
+Function: File Transfer Protocol is used for transferring files between a client and server. Common Use Cases: Uploading/downloading files, legacy system management. Normal Behavior: Operates in plaintext; supports anonymous or authenticated access. Security Concerns:
 
-* Secure remote login service
-* Target for brute-force attacks
-* **Risk:** Low
+Credentials and data are sent unencrypted.
 
-### DNS (53)
+Anonymous login may expose sensitive files.
 
-* Domain name resolution
-* Misconfiguration may allow DNS recursion
-* **Risk:** Medium
+Older FTP servers contain known exploits. Why It Matters in Pentesting: Often an initial foothold point, especially in vulnerable VMs.
 
-### HTTP (80)
+🔹 SSH (Port 22)
 
-* Web server service
-* Possible outdated web pages or exploits
-* **Risk:** Medium
+Function: Secure Shell provides encrypted remote management. Common Use Cases: Remote administration, file transfers (SCP), tunneling. Normal Behavior: Encrypted communication using keys or passwords. Security Concerns:
 
-### PostgreSQL (5432)
+Weak passwords lead to brute-force attacks.
 
-* Open database service
-* Default credentials common in vulnerable VMs
-* **Risk:** High
+Outdated SSH versions may allow privilege escalation. Why It Matters: A secure service but often the gateway to post-exploitation if misconfigured.
 
-### Webmin (10000)
+🔹 DNS (Port 53)
 
-* Web-based system administration tool
-* Historically contains RCE vulnerabilities
-* **Risk:** High
+Function: Resolves domain names to IP addresses. Common Use Cases: Network communication, internal name resolution. Normal Behavior: Accepts and responds to DNS queries. Security Concerns:
+
+Misconfigured DNS can allow zone transfers.
+
+Open DNS resolvers may be used in DDoS amplification attacks.
+
+Information leakage from DNS queries. Why It Matters: Attackers often enumerate DNS to find hidden subdomains.
+
+🔹 HTTP (Port 80)
+
+Function: Web service for hosting websites or applications. Common Use Cases: Hosting dashboards, content, admin panels. Normal Behavior: Serves static or dynamic web content over plaintext. Security Concerns:
+
+Outdated web servers have known vulnerabilities.
+
+Directory listing may leak sensitive files.
+
+Exposed admin panels lead to full compromise. Why It Matters: Web services are the most commonly attacked entry point.
+
+🔹 PostgreSQL (Port 5432)
+
+Function: Advanced open-source relational database system. Common Use Cases: Application backends, data storage. Normal Behavior: Accepts SQL queries from authenticated users. Security Concerns:
+
+Default credentials frequently left unchanged.
+
+Remote access drastically increases the attack surface.
+
+Unpatched versions have authentication bypass vulnerabilities. Why It Matters: Database compromise often means total data exposure.
+
+🔹 Webmin (Port 10000)
+
+Function: Web-based system administration tool. Common Use Cases: Managing users, services, packages, and system configuration. Normal Behavior: Web interface accessible via HTTP/HTTPS. Security Concerns:
+
+Historically vulnerable to remote code execution (RCE).
+
+Should never be exposed without TLS.
+
+Gives full root-level control if compromised. Why It Matters: One of the highest-risk services when exposed to a network.
 
 ---
 
