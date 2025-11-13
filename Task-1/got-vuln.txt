@@ -1,0 +1,24 @@
+# Nmap 7.95 scan initiated Thu Nov 13 03:16:08 2025 as: /usr/lib/nmap/nmap --script vuln -oN got-vuln.txt 10.10.10.129
+Nmap scan report for 10.10.10.129
+Host is up (0.00014s latency).
+Not shown: 992 closed tcp ports (reset)
+PORT      STATE    SERVICE
+21/tcp    open     ftp
+22/tcp    open     ssh
+53/tcp    open     domain
+80/tcp    open     http
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+| http-enum: 
+|   /robots.txt: Robots file
+|   /css/: Potentially interesting folder
+|_  /js/: Potentially interesting folder
+143/tcp   filtered imap
+3306/tcp  filtered mysql
+5432/tcp  open     postgresql
+10000/tcp open     snet-sensor-mgmt
+MAC Address: 00:50:56:2F:BB:64 (VMware)
+
+# Nmap done at Thu Nov 13 03:16:49 2025 -- 1 IP address (1 host up) scanned in 40.67 seconds

@@ -1,0 +1,16 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-13 02:44 EST
+Nmap scan report for 10.10.10.129
+Host is up (0.00025s latency).
+Not shown: 992 closed tcp ports (reset)
+PORT      STATE    SERVICE
+21/tcp    open     ftp
+22/tcp    open     ssh
+53/tcp    open     domain
+80/tcp    open     http
+143/tcp   filtered imap
+3306/tcp  filtered mysql
+5432/tcp  open     postgresql
+10000/tcp open     snet-sensor-mgmt
+MAC Address: 00:50:56:2F:BB:64 (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 14.50 seconds

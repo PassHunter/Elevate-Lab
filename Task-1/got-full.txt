@@ -1,0 +1,69 @@
+# Nmap 7.95 scan initiated Thu Nov 13 03:22:17 2025 as: /usr/lib/nmap/nmap -A -oN got-full.txt 10.10.10.129
+Nmap scan report for 10.10.10.129
+Host is up (0.0010s latency).
+Not shown: 992 closed tcp ports (reset)
+PORT      STATE    SERVICE    VERSION
+21/tcp    open     ftp?
+| fingerprint-strings: 
+|   GenericLines: 
+|     220-------------------------
+|     220-"These are the Dorne city walls. We must enter!" - Grey Worm
+|     220-
+|     220-"A fail2ban spell is protecting these walls. You'll never get in" - One of the Sand Snake Girls
+|     220-------------------------
+|_    This is a private system - No anonymous login
+22/tcp    open     ssh        Linksys WRT45G modified dropbear sshd (protocol 2.0)
+| ssh-hostkey: 
+|   2048 e6:5b:d7:78:6b:86:4f:9b:35:40:9f:c7:1f:dd:0d:9f (RSA)
+|   256 b8:e3:30:88:2e:ba:56:f2:49:b0:cc:35:c7:cc:48:06 (ECDSA)
+|_  256 a9:f2:d8:ee:f0:93:49:d8:19:04:ff:ad:89:ee:df:7d (ED25519)
+53/tcp    open     domain     (unknown banner: Bind)
+| dns-nsid: 
+|_  bind.version: Bind
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|     bind
+|_    Bind
+80/tcp    open     http       Apache httpd
+| http-robots.txt: 2 disallowed entries 
+|_/secret-island/ /direct-access-to-kings-landing/
+|_http-title: Game of Thrones CTF
+|_http-server-header: Apache
+143/tcp   filtered imap
+3306/tcp  filtered mysql
+5432/tcp  open     postgresql PostgreSQL DB 9.6.4 - 9.6.6 or 9.6.13 - 9.6.19
+10000/tcp open     http       MiniServ 1.590 (Webmin httpd)
+|_http-server-header: MiniServ/1.590
+|_http-title: Login to Stormlands
+| http-robots.txt: 1 disallowed entry 
+|_/
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port21-TCP:V=7.95%I=7%D=11/13%Time=69159552%P=x86_64-pc-linux-gnu%r(Gen
+SF:ericLines,11C,"220-------------------------\r\n220-\"These\x20are\x20th
+SF:e\x20Dorne\x20city\x20walls\.\x20We\x20must\x20enter!\"\x20-\x20Grey\x2
+SF:0Worm\r\n220-\r\n220-\"A\x20fail2ban\x20spell\x20is\x20protecting\x20th
+SF:ese\x20walls\.\x20You'll\x20never\x20get\x20in\"\x20-\x20One\x20of\x20t
+SF:he\x20Sand\x20Snake\x20Girls\r\n220-------------------------\r\n220\x20
+SF:This\x20is\x20a\x20private\x20system\x20-\x20No\x20anonymous\x20login\r
+SF:\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.95%I=7%D=11/13%Time=69159552%P=x86_64-pc-linux-gnu%r(DNS
+SF:VersionBindReqTCP,3F,"\0=\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07version\
+SF:x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x05\x04Bind\xc0\x0c
+SF:\0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c");
+MAC Address: 00:50:56:2F:BB:64 (VMware)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.14, Linux 3.8 - 3.16
+Network Distance: 1 hop
+Service Info: Device: router
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.04 ms 10.10.10.129
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov 13 03:25:47 2025 -- 1 IP address (1 host up) scanned in 210.48 seconds
