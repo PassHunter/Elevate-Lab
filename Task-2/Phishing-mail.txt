@@ -1,0 +1,23 @@
+From: Microsoft Account Support <security-update@micosoft-verification.com>
+To: you@example.com
+
+Subject: ⚠ Immediate Action Required: Your Microsoft Account Has Been Temporarily Locked
+
+Dear User,
+
+We detected unusual sign-in activity on your Microsoft account from a new device.
+To protect your account, we have temporarily locked access until we can verify that this was you.
+
+If this activity was not performed by you, you must verify your identity within the next 24 hours, otherwise your account may be permanently suspended.
+
+Please use the secure portal below to restore access:
+
+Verify Your Account Now
+https://microsoft-login-security-check.com/verify/user
+
+For your safety, failure to confirm your details may result in losing access to emails, OneDrive files, and linked devices.
+
+If you believe this message was sent to you in error, please ignore it.
+
+Thank you,
+Microsoft Account Security Team
