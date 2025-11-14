@@ -1,7 +1,11 @@
 Task 2: Phishing Email Analysis
+
 Student: Ayush Madavi
+
 Date: 14-11-2025
+
 Environment: Controlled Cybersecurity Lab (Phishing Simulation)
+
 🔰 Introduction
 
 For this task, I analyzed a simulated phishing email designed to look like a Microsoft security alert. The purpose of the exercise was to examine the email content, sender details, embedded link, and social engineering techniques used by attackers. By carefully evaluating the message headers, grammar, domain information, urgency tactics, and hyperlink behavior, I identified multiple indicators proving that the email is a 100% phishing attempt. This analysis helps improve my detection skills and strengthens real-world email security awareness.
@@ -27,7 +31,9 @@ Markdown (README.md) – to document findings
 Below is the exact simulated phishing email used for analysis:
 
 From: Microsoft Account Support <security-update@micosoft-verification.com>
+
 To: you@example.com
+
 Subject: ⚠ Immediate Action Required: Your Microsoft Account Has Been Temporarily Locked
 
 Dear User,
@@ -53,6 +59,7 @@ Thank you,
 Microsoft Account Security Team
 
 🔎 Identifying Phishing Indicators
+
 1️⃣ Fake Sender Address
 
 The email claims to be from Microsoft, but the sender address is:
