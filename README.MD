@@ -1,16 +1,21 @@
 Task: 3 — Vulnerability Scan Using Greenbone/OpenVAS
 
-📄 README.md — Task 3 (Vulnerability Assessment Report)
+(Vulnerability Assessment Report)
+
 Date: 17-11-2025
+
 Student: Ayush Madavi
+
 Tool Used: Greenbone Security Assistant (OpenVAS)
+
 Target Machine: 10.10.10.129 (Game of Thrones VM)
-🔰 1. Introduction
+
+🔰 Introduction
 
 In this task, I performed an automated vulnerability assessment on the target machine using Greenbone/OpenVAS.
 The objective was to identify security weaknesses, misconfigurations, and outdated services running on the host.
 
-🕒 2. Scan Details
+🕒 Scan Details
 
 Task Name: game
 
@@ -26,14 +31,15 @@ Report Count: 1
 
 Total Results: 39 (Filtered: 7)
 
-📊 3. Summary of Findings
+📊 Summary of Findings
 Severity	Count
 🔴 High	1
 🟠 Medium	5
 🟡 Low	1
 🟢 Log	0
 ⚪ False Positive	0
-🖥 4. Host Scanned
+
+🖥 Host Scanned
 
 IP Address: 10.10.10.129
 
@@ -45,7 +51,7 @@ Ports Detected:
 
 general/tcp
 
-⚠️ 5. Vulnerabilities Identified
+⚠️ Vulnerabilities Identified
 🔴 High Severity (1)
 1. Webmin / Usermin Login XSS Vulnerability
 
