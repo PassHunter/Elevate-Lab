@@ -1,34 +1,60 @@
 Task 3 – Vulnerability Assessment Using Greenbone/OpenVAS
+
 Date: 17-11-2025
+
 Student: Ayush Madavi
+
 Target Machine: 10.10.10.129
+
 Tool Used: Greenbone Security Assistant (OpenVAS)
+
 🔰 1. Introduction
 
 In this task, I performed a vulnerability assessment on a target machine using Greenbone Security Assistant (OpenVAS).
 The objective was to detect misconfigurations, outdated services, and critical vulnerabilities.
 
 🕒 2. Scan Details
+
 Field	Value
+
 Task Name	game
+
 Scan Type	Full and Fast
+
 Scanner	OpenVAS Default
+
 Minimum QoD	70%
+
 Report Count	1
+
 Total Results Found	39 (Filtered to 7 shown)
+
 📊 3. Summary of Detected Vulnerabilities
+
 Severity	Count
+
 🔴 High	1
+
 🟠 Medium	5
+
 🟡 Low	1
+
 🟢 Log	0
+
 ⚪ False Positive	0
+
 🖥 4. Host Information
+
 Detail	Value
+
 IP Address	10.10.10.129
+
 Open Ports	10000/tcp, 21/tcp, general/tcp
+
 ⚠️ 5. Vulnerabilities Identified
+
 🔴 High Severity (1)
+
 1. Webmin/Usermin Login Cross-Site Scripting (XSS)
 
 Port: 10000/tcp
